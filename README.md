@@ -1,4 +1,4 @@
-# GOST4401_81
+# GOST 4401-81. The Standard Atmosphere Model
 
 This is a partial implementation of the standard atmospheric model described in GOST 4401-81.
 The model is useful for processing of data from meteorological balloon sensors.
