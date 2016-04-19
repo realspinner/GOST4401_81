@@ -16,7 +16,6 @@ static float _GOST4401_geometric2geopotential(float altitude){
  * @param float pressurePa - pressure in pascals
  * @retval	float geometric altitude in meters
  */
-
 float GOST4401_getAltitude(float pressurePa){
 
   if ((pressurePa <= GOST4401_MIN_PRESSURE) || (pressurePa > GOST4401_MAX_PRESSURE))
@@ -51,7 +50,6 @@ float GOST4401_getAltitude(float pressurePa){
  * @param float altitude - geometric altitude in meters
  * @retval float - pressure in pascals
  */
-
 float GOST4401_getPressure(float altitude){
 	float geopotH = _GOST4401_geometric2geopotential(altitude);
 
@@ -86,7 +84,6 @@ float GOST4401_getPressure(float altitude){
  * @param float altitude - geometric altitude in meters
  * @retval float - temperature in degrees K
  */
-
 float GOST4401_getTemperature(float altitude){
 	float geopotH = _GOST4401_geometric2geopotential(altitude);
 
@@ -111,4 +108,3 @@ float GOST4401_getTemperature(float altitude){
 
   	return temp;
 }
-
