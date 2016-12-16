@@ -56,10 +56,10 @@ float GOST4401_getPressure(float altitude){
 	if ((geopotH < GOST4401_MIN_GPALT) || (geopotH >= GOST4401_MAX_GPALT))
     	return NAN;
     
- 	int idx = 0;
+ 	int idx;
   
-  	for (idx = 1; idx < GOST4401_LUT_RECORDS - 1; idx++) {
-    	if ((geopotH >= ag_table[idx].alt) && (geopotH < ag_table[idx].alt))
+  	for (idx = 0; idx < GOST4401_LUT_RECORDS - 1; idx++) {
+    	if ((geopotH >= ag_table[idx].alt) && (geopotH < ag_table[idx + 1].alt))
     		break;
   	}
 
@@ -90,10 +90,10 @@ float GOST4401_getTemperature(float altitude){
 	if ((geopotH < GOST4401_MIN_GPALT) || (geopotH >= GOST4401_MAX_GPALT))
     	return NAN;
     
- 	int idx = 0;
+ 	int idx;
   
-  	for (idx = 1; idx < GOST4401_LUT_RECORDS - 1; idx++) {
-    	if ((geopotH >= ag_table[idx].alt) && (geopotH < ag_table[idx].alt))
+  	for (idx = 0; idx < GOST4401_LUT_RECORDS - 1; idx++) {
+    	if ((geopotH >= ag_table[idx].alt) && (geopotH < ag_table[idx + 1].alt))
     		break;
   	}
 
