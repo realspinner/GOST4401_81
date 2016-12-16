@@ -21,7 +21,7 @@ float GOST4401_getAltitude(float pressurePa){
   if ((pressurePa <= GOST4401_MIN_PRESSURE) || (pressurePa > GOST4401_MAX_PRESSURE))
     return NAN;
    
-  int idx = 0;
+  int idx;
 
   for (idx = 0; idx < GOST4401_LUT_RECORDS - 1; idx++){
     if ((pressurePa <= ag_table[idx].press) && (pressurePa > ag_table[idx + 1].press))
